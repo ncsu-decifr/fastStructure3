@@ -44,7 +44,7 @@ def load(file):
     checkC = bin(struct.unpack('<B', line)[0])[2:].zfill(8)[::-1]
 
     if checkA!="00110110" or checkB!="11011000":
-        print "This is not a valid bed file"
+        print ("This is not a valid bed file")
         handle.close()
         sys.exit(2)
 
