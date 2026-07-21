@@ -21,7 +21,8 @@ def load(file):
     Nindiv = i+1
 
     # Number of bytes to read in at a time
-    Nbytes = Nindiv/4+(Nindiv%4>0)*1
+    # Nbytes = Nindiv/4+(Nindiv%4>0)*1
+    Nbytes = (Nindiv + 3) // 4
 
     # number of SNPs
     handle = open(file+'.bim','r')
