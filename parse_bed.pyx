@@ -11,7 +11,9 @@ cdef dict genomap = dict([('00',0),('01',1),('11',2),('10',3)])
 def load(file):
 
     cdef int n, l, i, Nindiv, Nsnp, Nbytes
-    cdef str line, checkA, checkB, checkC, bytestr
+    # cdef str line, checkA, checkB, checkC, bytestr
+    cdef bytes line
+    cdef str checkA, checkB, checkC
     cdef np.ndarray genotype
 
     # number of individuals
