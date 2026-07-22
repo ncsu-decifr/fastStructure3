@@ -17,7 +17,7 @@ def load(file):
     # ----------------------------
 
     # number of individuals
-    handle = open(file+'.fam','r')
+    handle = open(file+'.fam','rb')
     for i,line in enumerate(handle):
         pass
     Nindiv = i+1
@@ -27,7 +27,7 @@ def load(file):
     Nbytes = (Nindiv + 3) // 4
 
     # number of SNPs
-    handle = open(file+'.bim','r')
+    handle = open(file+'.bim','rb')
     for i,line in enumerate(handle):
         pass
     Nsnp = i+1
