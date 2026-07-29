@@ -117,7 +117,7 @@ def parseopts(opts):
         # elif opt in ["--input"]:
         #     params['inputfile'] = arg
 
-        elif opt in ["--output"]:
+        if opt in ["--output"]:
             params['outputfile'] = arg
 
         elif opt in ["--popfile"]:
