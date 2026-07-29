@@ -59,7 +59,8 @@ def plot_admixture(admixture, population_indices, population_labels, title):
 def get_admixture_proportions(params):
 
     # load admixture proportions
-    handle = open('%s.%d.meanQ'%(params['inputfile'],params['K']),'r')
+    # handle = open('%s.%d.meanQ'%(params['inputfile'],params['K']),'r')
+    handle = open('bestK.meanQ','r')
     admixture = np.array([line.strip().split() for line in handle]).astype('float')
     handle.close()
     N,K = admixture.shape
