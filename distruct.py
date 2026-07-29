@@ -111,11 +111,11 @@ def parseopts(opts):
 
     for opt, arg in opts:
 
-        if opt in ["-K"]:
-            params['K'] = int(arg)
+        # if opt in ["-K"]:
+        #     params['K'] = int(arg)
 
-        elif opt in ["--input"]:
-            params['inputfile'] = arg
+        # elif opt in ["--input"]:
+        #     params['inputfile'] = arg
 
         elif opt in ["--output"]:
             params['outputfile'] = arg
