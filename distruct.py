@@ -59,8 +59,7 @@ def plot_admixture(admixture, population_indices, population_labels, title):
 def get_admixture_proportions(params):
 
     # load admixture proportions
-    # handle = open('%s.%d.meanQ'%(params['inputfile'],params['K']),'r')
-    handle = open('bestK.meanQ','r')
+    handle = open('%s.%d.meanQ'%(params['inputfile'],params['K']),'r')
     admixture = np.array([line.strip().split() for line in handle]).astype('float')
     handle.close()
     N,K = admixture.shape
@@ -111,13 +110,13 @@ def parseopts(opts):
 
     for opt, arg in opts:
 
-        # if opt in ["-K"]:
-        #     params['K'] = int(arg)
+        if opt in ["-K"]:
+            params['K'] = int(arg)
 
-        # elif opt in ["--input"]:
-        #     params['inputfile'] = arg
+        elif opt in ["--input"]:
+            params['inputfile'] = arg
 
-        if opt in ["--output"]:
+        elif opt in ["--output"]:
             params['outputfile'] = arg
 
         elif opt in ["--popfile"]:
